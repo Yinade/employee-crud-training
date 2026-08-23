@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.app-header .app-navbar {
+  display: flex !important;
+  align-items: center;
+}
