@@ -1,0 +1,15 @@
+package com.lms_payment_service.lms_payment_service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableScheduling
+public class LmsPaymentServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LmsPaymentServiceApplication.class, args);
+	}
+
+}
