@@ -1,0 +1,94 @@
+.checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  font-size: 16px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border-radius: 5px;
+}
+
+/* Gradient Variant (Row Checkboxes) */
+.checkbox-wrapper.gradient-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+}
+
+.checkbox-wrapper.gradient-checkbox input:checked ~ .checkmark {
+  background-image: linear-gradient(to right, #2ac19d, #30a8d9);
+  background-color: transparent;
+  box-shadow: 3px 3px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+}
+
+.checkbox-wrapper.gradient-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+  left: 0.5em;
+  top: 0.3em;
+  width: 0.3em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper.gradient-checkbox input:checked ~ .checkmark:after {
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+/* White Variant (Header Checkbox) */
+.checkbox-wrapper.white-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+}
+
+.checkbox-wrapper.white-checkbox input:checked ~ .checkmark {
+  background-color: #ffffff;
+  background-image: none;
+  box-shadow: 3px 3px 0px rgb(183, 183, 183);
+  transition: all 0.2s;
+}
+
+.checkbox-wrapper.white-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+  left: 0.5em;
+  top: 0.3em;
+  width: 0.3em;
+  height: 0.6em;
+  border: solid #2a6f54;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper.white-checkbox input:checked ~ .checkmark:after {
+  opacity: 1;
+  transition: all 0.2s;
+}
